@@ -12,7 +12,7 @@ jobs:
       - run:
           command: |
             pip install pytest
-            pytest --junitxml=test-results/results.xml "HW02a -- Testing a Legacy Program/TestTriangle.py"
+            pytest --junitxml=test-results/results.xml "HW02a -- Testing A Legacy Program/TestTriangle.py"
       - store_test_results:
           path: test-results
 

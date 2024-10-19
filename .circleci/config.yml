@@ -10,14 +10,22 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Install Packages
           command: |
             pip install pytest
+            pip install requests
+      - run:
+          name: Run Unit Tests for TestTriangle
+          command: |
             pytest --junitxml=test-results/results.xml "HW02a -- Testing A Legacy Program/TestTriangle.py"
+      - run:
+          name: Run Unit Tests for TestGetReposAndCommits
+          command: |
+            pytest --junitxml=test-results/results.xml "HW04a -- Develop with Perspective of Tester in Mind/TestGetReposAndCommits.py"
       - store_test_results:
           path: test-results
 
-
 workflows:
-  testing_triangles:
+  testing_suite:
     jobs:
       - build-and-test

@@ -25,7 +25,7 @@ jobs:
       - run:
           name: Run Unit Tests for Mock TestGetReposAndCommits
           command: |
-            pytest --junitxml=test-results/results.xml "HW05a -- Isolate External Dependencies"
+            pytest --junitxml=test-results/results.xml "HW05a -- Isolate External Dependencies/TestGetReposAndCommits.py"
       - store_test_results:
           path: test-results
 

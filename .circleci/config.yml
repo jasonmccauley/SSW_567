@@ -22,6 +22,10 @@ jobs:
           name: Run Unit Tests for TestGetReposAndCommits
           command: |
             pytest --junitxml=test-results/results.xml "HW04a -- Develop with Perspective of Tester in Mind/TestGetReposAndCommits.py"
+      - run:
+          name: Run Unit Tests for Mock TestGetReposAndCommits
+          command: /
+            pytest --junitxml=test-results/results.xml "HW05a -- Isolate External Dependencies"
       - store_test_results:
           path: test-results
 
